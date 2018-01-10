@@ -28,7 +28,11 @@ NSString* INFO_VOLUME_CHANGED = @"(NATIVE AUDIO) Volume changed.";
 - (void)pluginInitialize
 {
     self.fadeMusic = NO;
-
+    
+    AVAudioPlayer *volumeOverridePlayer== [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"20SendMsg" ofType:@"mp3"]] error:nil];
+    [volumeOverridePlayer prepareToPlay];                                                                                          
+    
+    
     AVAudioSession *session = [AVAudioSession sharedInstance];
     // we activate the audio session after the options to mix with others is set 
     NSError *setCategoryError = nil;
