@@ -29,7 +29,7 @@ NSString* INFO_VOLUME_CHANGED = @"(NATIVE AUDIO) Volume changed.";
 {
     self.fadeMusic = NO;
     
-    AVAudioPlayer *volumeOverridePlayer== [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"20SendMsg" ofType:@"mp3"]] error:nil];
+    AVAudioPlayer *volumeOverridePlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"20SendMsg" ofType:@"mp3"]] error:nil];
     [volumeOverridePlayer prepareToPlay];                                                                                          
     
     
