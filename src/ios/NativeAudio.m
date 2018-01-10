@@ -29,8 +29,8 @@ NSString* INFO_VOLUME_CHANGED = @"(NATIVE AUDIO) Volume changed.";
 {
     self.fadeMusic = NO;
     
-    AVAudioPlayer *volumeOverridePlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"20SendMsg" ofType:@"mp3"]] error:nil];
-    [volumeOverridePlayer prepareToPlay];                                                                                          
+ //   AVAudioPlayer *volumeOverridePlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"20SendMsg" ofType:@"mp3"]] error:nil];
+ //   [volumeOverridePlayer prepareToPlay];                                                                                          
     
     
     AVAudioSession *session = [AVAudioSession sharedInstance];
@@ -40,7 +40,7 @@ NSString* INFO_VOLUME_CHANGED = @"(NATIVE AUDIO) Volume changed.";
 
     // Allows the application to mix its audio with audio from other apps.
     if (![session setCategory:AVAudioSessionCategoryAmbient
-                  withOptions:AVAudioSessionCategoryOptionDuckOthers
+                  //withOptions:AVAudioSessionCategoryOptionDuckOthers
                         error:&setCategoryError]) {
 
         NSLog (@"Error setting audio session category.");
